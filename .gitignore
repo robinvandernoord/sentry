@@ -102,3 +102,4 @@ sentry/test-custom-ca-roots.py
 
 # OSX minutia
 .DS_Store
+.toml

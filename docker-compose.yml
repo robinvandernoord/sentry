@@ -683,6 +683,9 @@ services:
     ports:
       - "$SENTRY_BIND:80/tcp"
     image: "nginx:1.29.1-alpine"
+    networks:
+      - default
+      - caddy
     volumes:
       - type: bind
         read_only: true
@@ -850,3 +853,8 @@ volumes:
   sentry-kafka-log:
   sentry-smtp-log:
   sentry-clickhouse-log:
+
+networks:
+  caddy:
+    external: true
+    name: caddy
